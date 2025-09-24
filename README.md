@@ -15,8 +15,6 @@
 [View on GitHub Pages](https://yourusername.github.io/your-repo-name/)  
 *(Update this link after deployment)*
 
-## 📁 Folder Structure
-Here’s a complete README.md file for your Pokédex project, Sumaiah. It’s clean, beginner-friendly, and ready to be used in your GitHub repo:
 
 📘 README.md
 # Pokédex — Vanilla JS
