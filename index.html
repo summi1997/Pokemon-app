@@ -2,63 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pokédex — Vanilla JS</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Pokéball Spinner Styles */
-    #spinner {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 999;
-      display: none;
-    }
-
-    .pokeball {
-      width: 60px;
-      height: 60px;
-      border: 4px solid black;
-      border-radius: 50%;
-      background: radial-gradient(circle at center, white 50%, red 50%);
-      position: relative;
-      animation: spin 1s linear infinite;
-    }
-
-    .pokeball::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 16px;
-      height: 16px;
-      background: white;
-      border: 3px solid black;
-      border-radius: 50%;
-      z-index: 2;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
 </head>
 <body>
-  <!-- 🌀 Pokéball Spinner -->
+  <!-- ===================== 🌀 Loading Spinner ===================== -->
   <div id="spinner">
-    <div class="pokeball"></div>
+    <div class="loader"></div>
   </div>
 
+  <!-- ===================== App Container ===================== -->
   <div class="container">
+
+    <!-- Header -->
     <header>
       <h1>Pokédex</h1>
       <div style="flex:1"></div>
       <div style="font-size:13px;color:#555">Data: PokéAPI</div>
     </header>
 
+    <!-- Controls -->
     <div class="controls">
       <input id="search" placeholder="Search Pokémon by name or id (e.g., pikachu or 25)" />
       <button id="btnSearch">Search</button>
@@ -67,20 +31,29 @@
       <button id="btnRefresh" class="ghost">Refresh</button>
     </div>
 
+    <!-- Status Message -->
     <div id="status" class="status"></div>
+
+    <!-- Pokémon Grid -->
     <div id="grid" class="grid"></div>
 
+    <!-- Pager -->
     <div class="pager">
       <button id="prev" class="ghost">Prev</button>
       <div id="pageInfo">Page 1</div>
       <button id="next" class="ghost">Next</button>
     </div>
 
+    <!-- Modal Root -->
     <div id="modalRoot"></div>
 
-    <footer>Tip: click "Details" on a card to see stats & abilities.</footer>
+    <!-- Footer -->
+    <footer>
+      Tip: click "Details" on a card to see stats & abilities.
+    </footer>
   </div>
 
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>

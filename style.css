@@ -1,3 +1,6 @@
+/* =========================================
+   THEME VARIABLES
+========================================= */
 :root {
   --bg: #f3f7fb;
   --card: #fff;
@@ -5,6 +8,9 @@
   --accent: #ef5350;
 }
 
+/* =========================================
+   GLOBAL STYLES
+========================================= */
 body {
   font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
   background: var(--bg);
@@ -19,6 +25,9 @@ body {
   margin: 0 auto;
 }
 
+/* =========================================
+   HEADER
+========================================= */
 header {
   display: flex;
   align-items: center;
@@ -31,6 +40,9 @@ h1 {
   font-size: 1.6rem;
 }
 
+/* =========================================
+   CONTROLS
+========================================= */
 .controls {
   display: flex;
   gap: 8px;
@@ -60,6 +72,9 @@ button.ghost {
   border: 1px solid #d0d7de;
 }
 
+/* =========================================
+   STATUS + GRID
+========================================= */
 .status {
   margin-bottom: 12px;
   color: var(--muted);
@@ -71,6 +86,9 @@ button.ghost {
   gap: 12px;
 }
 
+/* =========================================
+   CARD
+========================================= */
 .card {
   background: var(--card);
   border-radius: 10px;
@@ -97,6 +115,9 @@ img.sprite {
   margin-bottom: 8px;
 }
 
+/* =========================================
+   PAGER
+========================================= */
 .pager {
   display: flex;
   gap: 8px;
@@ -105,6 +126,9 @@ img.sprite {
   margin-top: 16px;
 }
 
+/* =========================================
+   MODAL
+========================================= */
 .modal {
   position: fixed;
   left: 0;
@@ -132,6 +156,9 @@ ul.stats {
   margin: 8px 0;
 }
 
+/* =========================================
+   FOOTER
+========================================= */
 footer {
   margin-top: 28px;
   color: var(--muted);
@@ -139,20 +166,25 @@ footer {
   text-align: center;
 }
 
+/* =========================================
+   RESPONSIVE
+========================================= */
 @media (max-width: 420px) {
   input {
     min-width: 140px;
   }
 }
 
-/* ✅ Spinner Styles */
+/* =========================================
+   SPINNER
+========================================= */
 #spinner {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
-  display: none;
+  display: none; /* hidden by default */
 }
 
 .loader {
@@ -165,10 +197,6 @@ footer {
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
